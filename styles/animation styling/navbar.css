@@ -1,0 +1,88 @@
+.button-to-navigation {
+  position: relative;
+}
+.button-to-navigation__button {
+  position: absolute;
+  bottom: 30px;
+  right: 30%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #5159f4;
+}
+.button-to-navigation__button:hover {
+  -webkit-animation-name: button-expand-to-navigation;
+          animation-name: button-expand-to-navigation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes button-expand-to-navigation {
+  from {
+    height: 60px;
+  }
+  to {
+    height: 80%;
+    width: 300px;
+    border-radius: 4px;
+  }
+}
+@keyframes button-expand-to-navigation {
+  from {
+    height: 60px;
+  }
+  to {
+    height: 80%;
+    width: 300px;
+    border-radius: 4px;
+  }
+}
+.button-to-navigation__button:not(hover) {
+  -webkit-animation-name: button-retract-from-navigation;
+          animation-name: button-retract-from-navigation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes button-retract-from-navigation {
+  from {
+    height: 80%;
+    width: 300px;
+    border-radius: 4px;
+  }
+  to {
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+@keyframes button-retract-from-navigation {
+  from {
+    height: 80%;
+    width: 300px;
+    border-radius: 4px;
+  }
+  to {
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.menu-slide-out-up__button {
+  border-radius: 50%;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  height: 56px;
+  width: 56px;
+  background-color: #2256f2;
+}
+.menu-slide-out-up__menu {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  height: 100px;
+  width: 56px;
+  border: 1px solid red;
+}/*# sourceMappingURL=navbar.css.map */

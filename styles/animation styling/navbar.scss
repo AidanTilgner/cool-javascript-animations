@@ -1,0 +1,71 @@
+@use "../partials/variables" as *;
+
+.button-to-navigation {
+  position: relative;
+
+  &__button {
+    position: absolute;
+    bottom: 30px;
+    right: 30%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $purpley-blue;
+
+    &:hover {
+      @keyframes button-expand-to-navigation {
+        from {
+          height: 60px;
+        }
+        to {
+          height: 80%;
+          width: 300px;
+          border-radius: 4px;
+        }
+      }
+
+      animation-name: button-expand-to-navigation;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    &:not(hover) {
+      @keyframes button-retract-from-navigation {
+        from {
+          height: 80%;
+          width: 300px;
+          border-radius: 4px;
+        }
+        to {
+          height: 60px;
+          border-radius: 50%;
+        }
+      }
+
+      animation-name: button-retract-from-navigation;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.menu-slide-out-up {
+  &__button {
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    height: 56px;
+    width: 56px;
+    background-color: #2256f2;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    height: 100px;
+    width: 56px;
+    border: 1px solid red;
+  }
+}
